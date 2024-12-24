@@ -1,7 +1,7 @@
 // cuda
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-#include <device_functions.h>
+#include <cuda_runtime_api.h>
 #include <cuda.h>
 
 // more standard libraries
@@ -23,10 +23,10 @@ __host__ void errCatch(cudaError_t err) {
 }
 
 // Returns the size in bytes of any type of vector
-template<typename T>
-size_t vBytes(const typename vector<T>& v) {
-	return sizeof(T) * v.size();
-}
+//template<typename T>
+//size_t vBytes(const typename vector<T>& v) {
+//	return sizeof(T) * v.size();
+//}
 
 cudaDeviceProp dumpDeviceProperties(bool printout = true)
 {

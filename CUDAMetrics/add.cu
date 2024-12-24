@@ -1,6 +1,6 @@
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-#include <device_functions.h>
+#include <cuda_runtime_api.h>
 #include <cuda.h>
 #include <map>
 
@@ -21,7 +21,7 @@ using std::chrono::duration_cast;
 using std::chrono::duration;
 
 // helper
-#include "helper.cuh";
+#include "helper.cuh"
 
 __global__ void addKernel(int* c, const int* a, const int* b)
 {

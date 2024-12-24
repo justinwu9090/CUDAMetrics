@@ -1,7 +1,7 @@
 ﻿// cuda
 #include "cuda_runtime.h"
 #include "device_launch_parameters.h"
-#include <device_functions.h>
+#include <cuda_runtime_api.h>
 #include <cuda.h>
 
 // more standard libraries
@@ -15,8 +15,8 @@
 using namespace std;
 
 // local
-#include "helper.cuh";
-#include "add.cuh";
+#include "helper.cuh"
+#include "add.cuh"
 
 int main()
 {
